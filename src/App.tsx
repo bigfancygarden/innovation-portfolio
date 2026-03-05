@@ -15,7 +15,7 @@ export function App() {
   }, [pathname]);
 
   return (
-    <div className="w-full overflow-x-hidden">
+    <div className="w-full overflow-x-clip">
       <SiteNav />
       <Routes>
         <Route path="/" element={<Navigate to="/overview" replace />} />
