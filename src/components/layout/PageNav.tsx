@@ -12,7 +12,7 @@ export function PageNav({ sections, activeId }: PageNavProps) {
   return (
     <nav className="bg-parchment border-b border-b-rule sticky top-[52px] z-100">
       {/* Desktop */}
-      <div className="page-nav-desktop max-w-[1200px] mx-auto px-5 md:px-12 flex items-stretch gap-0">
+      <div className="hidden md:flex max-w-[1200px] mx-auto px-5 md:px-12 items-stretch gap-0">
         {sections.map((item) => (
           <a
             key={item.id}
@@ -29,7 +29,7 @@ export function PageNav({ sections, activeId }: PageNavProps) {
       </div>
 
       {/* Mobile */}
-      <div className="page-nav-mobile">
+      <div className="md:hidden">
         <button
           onClick={() => setOpen(!open)}
           className="w-full flex items-center justify-between px-5 py-3 font-mono text-[11px] tracking-[0.12em] uppercase text-ink"
