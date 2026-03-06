@@ -56,5 +56,13 @@
       mobileNav.classList.toggle('open');
       toggle.classList.toggle('open');
     });
+    // Close menu when clicking a link
+    const links = mobileNav.querySelectorAll('a');
+    links.forEach(link => {
+      link.addEventListener('click', () => {
+        mobileNav.classList.remove('open');
+        toggle.classList.remove('open');
+      });
+    });
   }
 })();

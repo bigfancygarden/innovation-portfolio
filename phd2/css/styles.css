@@ -824,7 +824,6 @@
     nav { position: relative; min-height: 50px; }
     .site-nav { position: relative; min-height: 50px; }
     .mobile-menu-toggle { display: flex; }
-    .mobile-nav { display: flex; }
     .origin-grid, .playlist-grid { grid-template-columns: 1fr; gap: 40px; }
     .stacks-grid { grid-template-columns: 1fr; }
     .spine-table { font-size: 12px; }
