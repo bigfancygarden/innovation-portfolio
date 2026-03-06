@@ -56,6 +56,7 @@
       mobileNav.classList.remove('open');
       toggle.classList.remove('open');
     };
+    closeMenu(); // Ensure menu is closed on load
     toggle.addEventListener('click', (e) => {
       e.stopPropagation();
       mobileNav.classList.toggle('open');
