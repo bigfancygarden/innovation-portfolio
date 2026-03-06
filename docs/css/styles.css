@@ -820,6 +820,7 @@
     .header-inner { padding: 56px 24px 48px; }
     section { padding: 64px 24px; }
     nav div { display: none; }
+    .home-link { display: block !important; position: absolute; left: 20px; top: 50%; transform: translateY(-50%); }
     .site-nav .site-nav-inner { display: none; }
     nav { position: relative; min-height: 50px; }
     .site-nav { position: relative; min-height: 50px; }
