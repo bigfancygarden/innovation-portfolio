@@ -52,17 +52,25 @@
   const toggle = document.querySelector('.mobile-menu-toggle');
   const mobileNav = document.querySelector('.mobile-nav');
   if (toggle && mobileNav) {
-    toggle.addEventListener('click', () => {
+    const closeMenu = () => {
+      mobileNav.classList.remove('open');
+      toggle.classList.remove('open');
+    };
+    toggle.addEventListener('click', (e) => {
+      e.stopPropagation();
       mobileNav.classList.toggle('open');
       toggle.classList.toggle('open');
     });
     // Close menu when clicking a link
     const links = mobileNav.querySelectorAll('a');
     links.forEach(link => {
-      link.addEventListener('click', () => {
-        mobileNav.classList.remove('open');
-        toggle.classList.remove('open');
-      });
+      link.addEventListener('click', closeMenu);
+    });
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!mobileNav.contains(e.target) && !toggle.contains(e.target)) {
+        closeMenu();
+      }
     });
   }
 })();
